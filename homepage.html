@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Family Circle | Home Nest</title>
+</head>
+<body>
+    <div id="lovePopup" class="overlay">
+        <div class="popup-nest">
+            <span class="flame">🔥✨</span>
+            <h2>I love you Melinda. K. Rainbow</h2>
+            <div class="heart">❤️</div>
+            <p style="margin-top: 15px; font-weight: bold; color: #8b4513;">Your One True.. SMP</p>
+            <button class="close-btn" onclick="closePopup()">Enter Our Nest</button>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Our Roots</a>
+        <a href="homepage.html">The Family Circle</a>
+        <a href="storytime.html">Rainbow Spirit</a>
+    </nav>
+
+    <div class="container">
+        <h1>Weaving the Broken Threads</h1>
+        <img src="images/homepage-love.png" alt="Family gathered around campfire">
+
+        <div class="story-text">
+            <h3>From many alone, to one strong.</h3>
+            <p>Our return didn't start with words, but with the smell of smoke and the pull of the earth. One by one, we stepped back into the circle, bringing the bruises of our journey and the seeds of our tomorrow.</p>
+            <p>In the yarning, the gaps in our history began to close. We stopped being many voices shouting into the wind and became one deep, resonant hum—a songline that cannot be silenced.</p>
+            <p>We are no longer a collection of scattered embers; we are the bushfire that cleanses and renews. We move as one family, because when the roots are intertwined, the tree can never be uprooted by the storm.</p>
+        </div>
+
+        <div style="background: #fff; padding: 30px; border-radius: 30px; border: 2px dashed #d4a373; margin-top: 20px;" class="personal-note">
+            <h4 style="margin-top: 0;">Our Fire</h4>
+            <p><i>"Like the Elder holds the wood for the fire, I hold this space for you. This is our nest, built from hope and protected by love."</i></p>
+        </div>
+        
+        <footer style="margin-top: 40px; font-size: 0.8rem; color: #8b4513;">Always Was, Always Will Be — Built with love for Melinda.</footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // This checks if she just came from the index page
+            if (document.referrer.includes("index.html") || !sessionStorage.getItem('shown')) {
+                document.getElementById('lovePopup').style.display = 'flex';
+                sessionStorage.setItem('shown', 'true'); // Only shows once per session
+            }
+        };
+
+        function closePopup() {
+            document.getElementById('lovePopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
